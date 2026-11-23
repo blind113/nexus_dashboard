@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Nexus Dashboard",
+  "description": "Uma dashboard local para agendas, sistemas e acessos favoritos.",
+  "version": "0.1.0",
+  "permissions": ["identity", "storage"],
+  "host_permissions": ["https://www.googleapis.com/*"],
+  "oauth2": {
+    "client_id": "REPLACE_WITH_GOOGLE_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/calendar.events.readonly"]
+  },
+  "action": {
+    "default_title": "Abrir Nexus Dashboard",
+    "default_popup": "index.html"
+  },
+  "options_page": "index.html",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
